@@ -1191,7 +1191,10 @@ completion:(void (^)(BRTransaction *tx, uint64_t fee, NSError *error))completion
 
 - (NSString *)stringForAmount:(int64_t)amount
 {
-    return [self.format stringFromNumber:[(id)[NSDecimalNumber numberWithLongLong:amount]
+    // Divide by 1 million to convert to BTC
+    double val = amount/1000000.0;
+    
+    return [self.format stringFromNumber:[(id)[NSDecimalNumber numberWithLongLong:val]
             decimalNumberByMultiplyingByPowerOf10:-self.format.maximumFractionDigits]];
 }
 
