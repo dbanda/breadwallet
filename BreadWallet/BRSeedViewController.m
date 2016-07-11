@@ -25,6 +25,7 @@
 
 #import "BRSeedViewController.h"
 #import "BRWalletManager.h"
+//#import "BRWalletManager.m"
 #import "BRPeerManager.h"
 #import "NSMutableData+Bitcoin.h"
 #import "BREventManager.h"
@@ -44,6 +45,7 @@
 @property (nonatomic, strong) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *remindButton, *doneButton;
 @property (nonatomic, strong) IBOutlet UIImageView *wallpaper;
+@property (nonatomic, strong) IBOutlet UILabel *privKey;
 
 @property (nonatomic, strong) NSString *seedPhrase;
 @property (nonatomic, strong) id resignActiveObserver, screenshotObserver;
@@ -125,7 +127,13 @@
 
             self.seedLabel.text = s;
         }
-        else self.seedLabel.text = self.seedPhrase;
+        else {
+            self.seedLabel.text = self.seedPhrase;
+            
+            // Display the private key
+            NSString *privKey = [[BRWalletManager new] authPrivateKey];
+            self.privKey.text = privKey;
+        }
 
         self.seedPhrase = nil;
     }

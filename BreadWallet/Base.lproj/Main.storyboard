@@ -23,13 +23,13 @@
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Medium</string>
-            <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLights.ttc">
@@ -2631,8 +2631,8 @@ Other devices may be infected.
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="wallpaper-default" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-Fj-S7p">
                                 <rect key="frame" x="-94" y="-69" width="517" height="736"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="if you ever lose your phone, you will need this phrase to recover your wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="EQG-Km-ZKY">
-                                <rect key="frame" x="44" y="235" width="287" height="39.5"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="if you ever lose your phone, you will need this phrase to recover your wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="EQG-Km-ZKY">
+                                <rect key="frame" x="44" y="238" width="287" height="39.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2724,26 +2724,58 @@ Other devices may be infected.
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is your private key. Anyone who has this can spend your BTC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="DpS-Yp-3hu">
+                                <rect key="frame" x="0.0" y="461" width="375" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-wD-7oe" customClass="BRCopyLabel">
+                                <rect key="frame" x="0.0" y="524" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Td7-xP-kmB" firstAttribute="top" secondItem="EQG-Km-ZKY" secondAttribute="bottom" constant="12" id="1no-Pe-bnJ"/>
+                            <constraint firstItem="cBg-wD-7oe" firstAttribute="centerX" secondItem="7xM-f1-iRp" secondAttribute="centerX" id="3ex-1V-1lh"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="leading" secondItem="7xM-f1-iRp" secondAttribute="leadingMargin" constant="-20" id="A1D-e3-MmB"/>
+                            <constraint firstItem="cBg-wD-7oe" firstAttribute="top" secondItem="DpS-Yp-3hu" secondAttribute="bottom" constant="8" id="BAO-j5-66C"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="top" secondItem="cyp-mV-Bhd" secondAttribute="bottom" constant="5" id="BSN-wD-1W2"/>
                             <constraint firstItem="PJj-7p-7Bt" firstAttribute="leading" secondItem="cyp-mV-Bhd" secondAttribute="trailing" constant="-15" id="Be0-6P-U91"/>
                             <constraint firstAttribute="centerX" secondItem="Td7-xP-kmB" secondAttribute="centerX" id="Cyd-Qh-cJo"/>
                             <constraint firstItem="8KJ-Le-F0y" firstAttribute="leading" secondItem="7xM-f1-iRp" secondAttribute="leading" id="Duy-qc-fl9"/>
                             <constraint firstItem="ZPH-1d-tW9" firstAttribute="centerY" secondItem="7xM-f1-iRp" secondAttribute="centerY" constant="32" id="FT9-CA-Rxu"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="centerX" secondItem="dqh-Fj-S7p" secondAttribute="centerX" id="FYv-mU-V7H"/>
                             <constraint firstItem="cyp-mV-Bhd" firstAttribute="centerY" secondItem="PJj-7p-7Bt" secondAttribute="centerY" constant="-1" id="ICm-10-8ef"/>
                             <constraint firstItem="NXP-4T-hz3" firstAttribute="top" secondItem="8KJ-Le-F0y" secondAttribute="bottom" id="Jkm-eH-Kvj"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="top" secondItem="cyp-mV-Bhd" secondAttribute="bottom" constant="15.5" id="KnP-Cl-JOq"/>
                             <constraint firstAttribute="centerX" secondItem="cyp-mV-Bhd" secondAttribute="centerX" constant="15" id="MPp-p2-sIb"/>
                             <constraint firstItem="cyp-mV-Bhd" firstAttribute="top" secondItem="ZPH-1d-tW9" secondAttribute="bottom" constant="44" id="OfR-ik-g8N"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="centerX" secondItem="7xM-f1-iRp" secondAttribute="centerX" id="Ohf-2k-9tN"/>
                             <constraint firstItem="dqh-Fj-S7p" firstAttribute="leading" secondItem="7xM-f1-iRp" secondAttribute="leading" constant="-94" id="RmH-Ha-LXT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DpS-Yp-3hu" secondAttribute="trailing" constant="-20" id="VMa-hm-ZLU"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="leading" secondItem="cyp-mV-Bhd" secondAttribute="leading" id="WHt-Tb-EQz"/>
+                            <constraint firstItem="DpS-Yp-3hu" firstAttribute="leading" secondItem="cBg-wD-7oe" secondAttribute="leading" id="eN6-xY-VAk"/>
+                            <constraint firstItem="cBg-wD-7oe" firstAttribute="top" secondItem="DpS-Yp-3hu" secondAttribute="bottom" constant="8" id="g83-3W-wB7"/>
                             <constraint firstItem="EQG-Km-ZKY" firstAttribute="centerX" secondItem="ZPH-1d-tW9" secondAttribute="centerX" id="iYR-xb-lmt"/>
                             <constraint firstAttribute="bottom" secondItem="dqh-Fj-S7p" secondAttribute="bottom" id="kbM-f4-8YY"/>
                             <constraint firstAttribute="trailing" secondItem="ZPH-1d-tW9" secondAttribute="trailing" id="mck-cz-C1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBg-wD-7oe" secondAttribute="trailing" constant="-20" id="tcS-xE-5LX"/>
                             <constraint firstItem="ZPH-1d-tW9" firstAttribute="top" secondItem="EQG-Km-ZKY" secondAttribute="bottom" constant="76" id="uLa-WH-pVa"/>
                             <constraint firstItem="ZPH-1d-tW9" firstAttribute="leading" secondItem="7xM-f1-iRp" secondAttribute="leading" id="urF-Kc-dFa"/>
+                            <constraint firstItem="cBg-wD-7oe" firstAttribute="leading" secondItem="7xM-f1-iRp" secondAttribute="leadingMargin" constant="-20" id="xeN-c8-N8i"/>
                             <constraint firstAttribute="trailing" secondItem="8KJ-Le-F0y" secondAttribute="trailing" id="zoK-lE-ReZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FYv-mU-V7H"/>
+                                <exclude reference="KnP-Cl-JOq"/>
+                                <exclude reference="WHt-Tb-EQz"/>
+                                <exclude reference="eN6-xY-VAk"/>
+                                <exclude reference="g83-3W-wB7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="pSA-60-Zeg">
                         <nil key="title"/>
@@ -2759,6 +2791,7 @@ Other devices may be infected.
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="privKey" destination="cBg-wD-7oe" id="VlX-XX-PCm"/>
                         <outlet property="remindButton" destination="QQS-Me-RNh" id="Jkq-bu-28n"/>
                         <outlet property="seedLabel" destination="dz8-9E-hrc" id="EuI-Ib-8iZ"/>
                         <outlet property="toolbar" destination="8KJ-Le-F0y" id="nRb-6n-qUI"/>
@@ -2774,7 +2807,7 @@ Other devices may be infected.
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2461" y="2160"/>
+            <point key="canvasLocation" x="2460.5" y="2159.5"/>
         </scene>
     </scenes>
     <resources>
