@@ -1,3 +1,8 @@
+###This version has 2 major changes
+
+* The private key is displayed on the recovery phase window
+* The default currency is BTC instead of bits
+
 ![ƀ](/images/icon.png) breadwallet
 ----------------------------------
 
